@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* --- ESTILOS IDÊNTICOS AO ANTERIOR (Mantendo a identidade visual) --- */
         :root {
             --bg-color: #050505;
             --card-bg: rgba(20, 20, 20, 0.8);
@@ -22,7 +21,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg-color); color: var(--text-white); overflow-x: hidden; background-image: radial-gradient(circle at 10% 20%, rgba(118, 0, 255, 0.15) 0%, transparent 20%), radial-gradient(circle at 90% 80%, rgba(118, 0, 255, 0.1) 0%, transparent 20%); }
         
-        /* Header & Hero */
         header { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-glass); }
         .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-white); letter-spacing: 1px; }
         .logo span { color: var(--primary-purple); }
@@ -32,12 +30,10 @@
         .cta-button { background: var(--primary-purple); color: #000; padding: 18px 40px; font-size: 1.1rem; font-weight: 700; text-decoration: none; border-radius: 50px; box-shadow: 0 0 20px var(--primary-glow); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; border: 2px solid var(--primary-purple); animation: pulse 2s infinite; cursor: pointer; }
         .cta-button:hover { background: transparent; color: var(--primary-purple); box-shadow: 0 0 40px var(--primary-glow); }
         
-        /* Sections */
         section { padding: 80px 5%; }
         .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; }
         .section-title span { color: var(--primary-purple); border-bottom: 2px solid var(--primary-purple); }
         
-        /* Services */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .service-card { background: var(--card-bg); padding: 40px; border-radius: 16px; border: 1px solid var(--border-glass); transition: transform 0.3s ease; }
         .service-card:hover { transform: translateY(-10px); border-color: var(--primary-purple); }
@@ -45,7 +41,6 @@
         .service-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
         .service-card p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.6; }
 
-        /* Pricing */
         .pricing { background: linear-gradient(180deg, var(--bg-color) 0%, #0f0f0f 100%); }
         .pricing-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; }
         .plan-card { background: var(--card-bg); border: 1px solid var(--border-glass); border-radius: 20px; padding: 30px; width: 320px; display: flex; flex-direction: column; position: relative; transition: all 0.3s ease; }
@@ -53,13 +48,10 @@
         .plan-header h3 { font-size: 1.4rem; color: var(--primary-purple); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
         .plan-price { font-size: 1.5rem; color: var(--text-white); margin-bottom: 10px; font-weight: bold; }
         .price-details { font-size: 0.85rem; color: #ccc; margin-bottom: 20px; }
-        .required { color: #ff6b6b; font-weight: bold; }
-        .optional { color: #4ecdc4; font-weight: bold; }
         .plan-features { list-style: none; margin-top: 10px; }
         .plan-features li { margin-bottom: 12px; color: var(--text-gray); font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; }
         .plan-features li strong { color: #fff; display: block; font-size: 0.95rem; margin-bottom: 2px; }
 
-        /* Reviews Section Real */
         .reviews { background-color: #0a0a0a; }
         .reviews-container { max-width: 800px; margin: 0 auto; }
         .reviews-header { display: flex; align-items: center; justify-content: center; margin-bottom: 40px; background: var(--card-bg); padding: 20px; border-radius: 12px; border: 1px solid var(--border-glass); }
@@ -90,7 +82,6 @@
         .submit-review-btn:hover { background: var(--primary-purple); color: #000; }
         .submit-review-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-        /* Footer */
         footer { padding: 50px 5%; text-align: center; border-top: 1px solid var(--border-glass); }
         .footer-content h4 { font-size: 1.5rem; margin-bottom: 20px; }
         .social-links a { color: var(--text-white); font-size: 1.5rem; margin: 0 15px; transition: color 0.3s; }
@@ -126,11 +117,69 @@
     <section class="pricing">
         <div class="section-title"><h2>Escolha seu <span>Plano</span></h2></div>
         <div class="pricing-grid">
-            <div class="plan-card"><div class="plan-header"><h3>Plano Site</h3><div class="plan-price">R$ 399,90 <span style="font-size:0.8rem; font-weight:normal">(Único)</span></div><div class="price-details required">+ Taxa Adm R$ 59,90/mês (Obrigatório)</div></div><ul class="plan-features"><li><strong>Landing Page Completa</strong>Focada em vendas.</li><li><strong>Conteúdo</strong>Apresentação, Banner e Catálogo.</li><li><strong>Social</strong>Área de feedbacks.</li></ul></div>
-            <div class="plan-card"><div class="plan-header"><h3>Planilha Silver</h3><div class="plan-price">R$ 99,90 <span style="font-size:0.8rem; font-weight:normal">(Único)</span></div><div class="price-details optional">+ Taxa R$ 9,90/mês (Opcional)</div></div><ul class="plan-features"><li><strong>Planilhas Prontas</strong>Controle de gastos e outros.</li><li><strong>Personalização</strong>Ajustes simples.</li></ul></div>
-            <div class="plan-card"><div class="plan-header"><h3>Planilha Gold</h3><div class="plan-price">R$ 299,90 <span style="font-size:0.8rem; font-weight:normal">(Único)</span></div><div class="price-details optional">+ Taxa R$ 19,90/mês (Opcional)</div></div><ul class="plan-features"><li><strong>Tudo do Silver</strong>Planilhas prontas e personalização.</li><li><strong>Dashboard Automático (BI)</strong>Painéis gráficos inteligentes.</li><li><strong>Atualização Automática</strong>Dados em tempo real.</li></ul></div>
-            <div class="plan-card"><div class="plan-header"><h3>Mkt Silver</h3><div class="plan-price">R$ 99,90 <span style="font-size:0.8rem; font-weight:normal">/mês</span></div><div class="price-details">Recorrência Mensal</div></div><ul class="plan-features"><li><strong>5 Flyers Digitais</strong>Artes para Feed.</li><li><strong>2 Vídeos Curtos</strong>Animações.</li><li><strong>5 Stories Atrativos</strong>Pacote semanal.</li></ul></div>
-            <div class="plan-card"><div class="plan-header"><h3>Mkt Gold</h3><div class="plan-price">R$ 149,90 <span style="font-size:0.8rem; font-weight:normal">/mês</span></div><div class="price-details">Recorrência Mensal</div></div><ul class="plan-features"><li><strong>10 Flyers Digitais</strong>O dobro de conteúdo.</li><li><strong>5 Vídeos Curtos</strong>Animações.</li><li><strong>10 Stories Atrativos</strong>Pacote semanal.</li></ul></div>
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Plano Site</h3>
+                    <div class="plan-price">R$ 399,90 <span style="font-size:0.8rem; font-weight:normal">(Único)</span></div>
+                    <div class="price-details">Investimento de pagamento único.</div>
+                </div>
+                <ul class="plan-features">
+                    <li><strong>Landing Page Completa</strong>Focada em vendas.</li>
+                    <li><strong>Conteúdo</strong>Apresentação, Banner e Catálogo.</li>
+                    <li><strong>Social</strong>Área de feedbacks.</li>
+                </ul>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Planilha Silver</h3>
+                    <div class="plan-price">R$ 99,90 <span style="font-size:0.8rem; font-weight:normal">(Único)</span></div>
+                    <div class="price-details">Acesso vitalício ao arquivo.</div>
+                </div>
+                <ul class="plan-features">
+                    <li><strong>Planilhas Prontas</strong>Controle de gastos e outros.</li>
+                    <li><strong>Personalização</strong>Ajustes simples inclusos.</li>
+                </ul>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Planilha Gold</h3>
+                    <div class="plan-price">R$ 299,90 <span style="font-size:0.8rem; font-weight:normal">(Único)</span></div>
+                    <div class="price-details">Solução completa em dados.</div>
+                </div>
+                <ul class="plan-features">
+                    <li><strong>Tudo do Silver</strong>Planilhas prontas e personalização.</li>
+                    <li><strong>Dashboard Automático (BI)</strong>Painéis gráficos inteligentes.</li>
+                    <li><strong>Atualização Automática</strong>Dados em tempo real.</li>
+                </ul>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Mkt Silver</h3>
+                    <div class="plan-price">R$ 99,90 <span style="font-size:0.8rem; font-weight:normal">(Único)</span></div>
+                    <div class="price-details">Pacote de Conteúdo</div>
+                </div>
+                <ul class="plan-features">
+                    <li><strong>5 Flyers Digitais</strong>Artes para Feed.</li>
+                    <li><strong>2 Vídeos Curtos</strong>Animações.</li>
+                    <li><strong>5 Stories Atrativos</strong>Pacote fechado.</li>
+                </ul>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Mkt Gold</h3>
+                    <div class="plan-price">R$ 149,90 <span style="font-size:0.8rem; font-weight:normal">(Único)</span></div>
+                    <div class="price-details">Pacote de Conteúdo Premium</div>
+                </div>
+                <ul class="plan-features">
+                    <li><strong>10 Flyers Digitais</strong>O dobro de conteúdo.</li>
+                    <li><strong>5 Vídeos Curtos</strong>Animações.</li>
+                    <li><strong>10 Stories Atrativos</strong>Pacote fechado.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -145,8 +194,7 @@
                 </div>
             </div>
 
-            <div class="review-list" id="review-list">
-                </div>
+            <div class="review-list" id="review-list"></div>
 
             <div class="review-form-box">
                 <h3>Deixe sua Avaliação</h3>
@@ -175,11 +223,9 @@
     </footer>
 
     <script type="module">
-        // Importa as funções necessárias do Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-        // --- ⚠️ AQUI VOCÊ COLA AS SUAS CONFIGURAÇÕES DO FIREBASE ---
         const firebaseConfig = {
             apiKey: "AIzaSyA0-5ORbtzAPCK_Vyou0bQRL9zqyTZXAmQ",
             authDomain: "the-nexusx.firebaseapp.com",
@@ -187,16 +233,13 @@
             storageBucket: "the-nexusx.firebasestorage.app",
             messagingSenderId: "3352943436",
             appId: "1:3352943436:web:26c632fd4f16403b7c0de9",
-	    measurementId: "G-6BMJ0W3W6P"
+            measurementId: "G-6BMJ0W3W6P"
         };
-        // -----------------------------------------------------------
 
-        // Inicializa o Banco de Dados
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         const reviewsCollection = collection(db, "reviews");
 
-        // Elementos do DOM
         const reviewForm = document.getElementById('review-form');
         const reviewList = document.getElementById('review-list');
         const avgScoreDisplay = document.getElementById('avg-score-display');
@@ -204,12 +247,10 @@
         const avgStarsDisplay = document.getElementById('avg-stars-display');
         const submitBtn = document.getElementById('submit-btn');
 
-        // FUNÇÃO 1: ESCUTAR O BANCO DE DADOS EM TEMPO REAL
-        // Sempre que alguém comentar, isso atualiza a tela automaticamente
         const q = query(reviewsCollection, orderBy("timestamp", "desc"));
         
         onSnapshot(q, (snapshot) => {
-            reviewList.innerHTML = ""; // Limpa a lista atual
+            reviewList.innerHTML = "";
             let totalScore = 0;
             let totalCount = 0;
 
@@ -221,13 +262,11 @@
                 return;
             }
 
-            // Loop para processar cada avaliação salva
             snapshot.forEach((doc) => {
                 const data = doc.data();
                 totalScore += data.rating;
                 totalCount++;
 
-                // Cria o HTML do review
                 const reviewItem = document.createElement('div');
                 reviewItem.classList.add('review-item');
                 reviewItem.innerHTML = `
@@ -242,37 +281,27 @@
                 reviewList.appendChild(reviewItem);
             });
 
-            // Atualiza a média
             const average = (totalScore / totalCount).toFixed(1);
             avgScoreDisplay.textContent = average;
             totalReviewsDisplay.textContent = `Baseado em ${totalCount} avaliações`;
             avgStarsDisplay.innerHTML = generateStars(Math.round(average));
         });
 
-        // FUNÇÃO 2: ENVIAR DADOS PARA O BANCO (SALVAR)
         reviewForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
             const ratingInput = document.querySelector('input[name="rating"]:checked');
             const commentInput = document.getElementById('review-comment');
             const nameInput = document.getElementById('reviewer-name');
-
             if (!ratingInput) { alert("Selecione uma estrela!"); return; }
-
-            // Bloqueia botão para evitar clique duplo
             submitBtn.disabled = true;
             submitBtn.textContent = "Enviando...";
-
             try {
-                // Salva no Firestore
                 await addDoc(reviewsCollection, {
                     name: nameInput.value || "Anônimo",
                     rating: parseInt(ratingInput.value),
                     comment: commentInput.value,
-                    timestamp: serverTimestamp() // Salva a hora exata do servidor
+                    timestamp: serverTimestamp()
                 });
-
-                // Limpa formulário
                 reviewForm.reset();
                 alert("Avaliação enviada com sucesso!");
             } catch (error) {
@@ -284,7 +313,6 @@
             }
         });
 
-        // Auxiliar: Gerar estrelas visuais
         function generateStars(rating) {
             let starsHtml = '';
             for (let i = 1; i <= 5; i++) {
@@ -294,6 +322,5 @@
             return starsHtml;
         }
     </script>
-
 </body>
 </html>
